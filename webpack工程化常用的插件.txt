@@ -1,0 +1,51 @@
+﻿    "@babel/core": "^7.1.6",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "autoprefixer": "^9.3.1",
+    "babel-loader": "^8.0.4",
+    "babel-polyfill": "^6.26.0",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^1.0.1",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "html-withimg-loader": "^0.1.16",
+    "image-webpack-loader": "^4.5.0",
+    "imagemin-pngquant": "^6.0.0", // 
+    "img-loader": "^3.0.1",
+    "mini-css-extract-plugin": "^0.4.5",
+    "node-sass": "^4.10.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+
+autoprefixer:
+autoprefixerSass，Stylus或LESS等预处理器共通使用。它适用于普通的CSS，而你无需关心要为哪些浏览器加前缀，
+只需全新关注于实现，并使用W3C最新的规范。配合postcss一起使用后更好。友情链接:https://www.jianshu.com/p/46a19ee297fc
+
+optimize-css-assets-webpack-plugin:
+optimize-css-assets-webpack-plugin用于优化或者压缩CSS资源,webpack3中一般配合 ExtractTextPlugin一起使用。
+
+mini-css-extract-plugin:
+mini-css-extract-plugin将CSS提取为独立的文件的插件，对每个包含css的js文件都会创建一个CSS文件，
+支持按需加载css和sourceMap。友情链接:https://www.jianshu.com/p/91e60af11cc9
+
+html-loader：
+html-loader会把html后缀的文件当做字符串来处理，你把index.html后缀改成tpl,
+使用ejs-loader去处理这个模板文件，这样里面就能识别<%%>了。
+
+file-loader:
+使用file-loader打包的图片会给每张图片都生成一个随机的hash值作为图片的名字。
+
+imagemin-pngquant: 
+imagemin-pngquant压缩图片
+
+image-webpack-loader:
+image-webpack-loader可以帮助我们对图片进行压缩和优化
+
+html-withimg-loader:
+html-withimg-loader用于不识别html中img标签src引入的图片，因为没有被依赖，图片将不会被打包。

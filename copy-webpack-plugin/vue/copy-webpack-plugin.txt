@@ -1,0 +1,5 @@
+﻿webpack拷贝插件 copy-webpack-plugin
+
+cnpm i
+
+npm run build

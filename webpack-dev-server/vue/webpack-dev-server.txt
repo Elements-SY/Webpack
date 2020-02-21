@@ -1,0 +1,12 @@
+﻿如果全局安装webpack-dev-server模块命令，
+那么在该文件夹目录下打开终端输入webpack-dev-server回车即可启动webpack-dev-server服务，
+如果不想通过全局命令启动webpack-dev-server服务，就需要cnpm i webpack-dev-server -D下载
+到当前目录中，并且在package.json文件中的scripts中添加命令，如下:
+
+"scripts": {
+    "build": "webpack --mode=production",
+    "dev": "webpack-dev-server"
+ },
+
+如同配置webpack打包命令一样。（npm run dev）
+

@@ -1,0 +1,7 @@
+﻿cnpm i webpack webpack-cli -D
+
+npm run dev
+  
+or 
+
+npm run build

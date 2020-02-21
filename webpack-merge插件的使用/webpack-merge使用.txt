@@ -1,0 +1,4 @@
+´ò¿ªÖÕ¶Ë
+1£ºcnpm i 
+
+2£ºnode index.js

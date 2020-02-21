@@ -1,0 +1,53 @@
+﻿全局安装webpack webpack-cli
+
+创建文件夹vue在该目录下创建webpack.config.js编辑该文件内容如下:
+
+const path = require('path');
+
+module.exports = {
+  /*
+  mode 配置选项 string
+  mode: 'production' or 'development'
+  link: https://www.webpackjs.com/concepts/mode/
+  */
+  // mode: 'development',// 如果不在这里设置打包模式，可以终端设置，亦可以在package.json命令里设置
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
+  }
+}
+
+进入vue目录下打开终端输入weback回车即可。
+
+D:\vue>webpack
+Hash: f99527ae00ea2f52a146 // 打包生产文件的hash值
+Version: webpack 4.41.5 // 当前webpack的版本号
+Time: 89ms // 打包所用的时间
+Built at: 2020-02-08 10:27:29 // 当前打包的时间
+Asset       Size  Chunks           Chunk Names // 资源 大小 名字 (描述下一行的信息)
+bundle.js   965 bytes              0  [emitted]  main
+
+Entrypoint main = bundle.js // 主入口点
+
+ 来自 bundle.js 
+
+[0] ./src/index.js 64 bytes {0} [built]
+
+WARNING in configuration
+配置中的警告
+The 'mode' option has not been set, webpack will fallback to 'production' for this value.
+尚未设置“mode”选项，webpack将为此值回退到“production”。(意为如果打包不设置打包模式，那么将默认使用“production”生产模式)
+
+Set 'mode' option to 'development' or 'production' to enable defaults for each environment.
+将“mode”选项设置为“development”或“production”，以启用每个环境的默认值。
+
+You can also set it to 'none' to disable any default behavior. 
+也可以将其设置为“无”以禁用任何默认行为
+
+Learn more: https://webpack.js.org/configuration/mode/
+更多学习: https://webpack.js.org/configuration/mode/
+上述学习更多的链接地址就是使用该打包webpack版本打包模式的链接地址，该链接是英文版的，中文版入口如下:
+更多学习: https://www.webpackjs.com/concepts/mode/
+
+

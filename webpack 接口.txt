@@ -1,0 +1,6 @@
+﻿webpack 常用的API有，
+入口模块接口 entry
+输出模块接口 output
+模块接口 module
+插件接口 plugins 其中插件接口接收的是一个数组
+开发接口 devServer

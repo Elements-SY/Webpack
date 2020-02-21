@@ -1,0 +1,48 @@
+﻿cacheGroups即缓存组，其中的每一项缓存组都可以继承/覆盖,
+
+之前提到的splitChunks参数值（如name、maxSize、minSize、maxInitialRequests、maxAsyncRequests等），
+
+除此之外还额外提供了三个配置，分别为：test, priority 和 reuseExistingChunk。
+
+
+
+test: 表示要过滤 modules，默认为所有的 modules，可匹配模块路径或 chunk 名字，
+
+当匹配到某个 chunk
+的名字时，这个chunk里面引入的所有 module 都会选中；
+
+
+priority：权重，数字越大表示优先级越高。
+
+一个 module 可能会满足多个 cacheGroups 的正则匹配，
+
+到底将哪个缓存组应用于这个module，取决于优先级；
+
+
+reuseExistingChunk：表示是否使用已有的 chunk，true 则表示如果当前的 chunk 包含的模块已经被抽取出去了，
+
+那么将不会重新生成新的，即几个chunk复用被拆分出去的一个module；
+除了上面的的属性，
+
+缓存组还有两个属性——filename和enforce：
+
+filename: 这个属性会覆盖output.filename这个属性，
+
+前提是chunks设为initial。同时，这个属性也能全局设置，比如splitChunks.filename，
+
+但是如果chunks设为非initial，webpack将会报错，所以官方建议这个属性不全局设置。
+
+
+enforce: 布尔类型，默认为false。
+
+当设为true时，webpack会忽略splitChunks.minSize、splitChunks.minChunks、
+
+splitChunks.maxAsyncRequests、splitChunks.maxInitialRequests这几个配置项，
+
+并且只要某个缓存组设置了enforce为true，匹配的模块就会忽略前面提到的那几个属性，
+
+即使有其他的缓存组匹配同样的模块，也没有设置enforce，同时优先级比设置了enforce的高，enforce: true仍然有效。
+
+————————————————
+版权声明：本文为CSDN博主「YaoDeBiAn」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/YaoDeBiAn/article/details/104144548

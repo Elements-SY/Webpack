@@ -1,0 +1,1 @@
+console.log('北京')

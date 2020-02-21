@@ -1,0 +1,13 @@
+.login {
+  color: blueviolet;
+}
+
+.icon i {
+  width: 80px;
+  height: 80px;
+  display: block;
+  background-image: url('../../assets/image/logo/WB_logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

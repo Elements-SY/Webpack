@@ -1,0 +1,3 @@
+webpack --mode=development
+
+pause

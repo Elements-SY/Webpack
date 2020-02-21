@@ -1,0 +1,46 @@
+﻿webpack为什么要配置loader ?
+
+loader官方解释是文件预处理器，通俗点说就是webpack在处理静态文件的时候，需要使用 loader 来加载各种文件，
+比如： html文件需要使用html-loader ,css 需要使用css-loader 、 style-loader 等等。
+
+@babel/core 是Babel的核心功能模块
+@babel/cli是一个允许你从终端使用 babel 的工具
+cnpm i webpack webpack-cli webpack-dev-server html-webpack-plugin vue-loader css-loader babel-loader vue-template-compiler @babel/core -S
+
+cnpm i vue -S
+
+/*
+  vue-template-compiler插件主要是用来编译模板字符串并返回已编译的JavaScript代码及其AST树（抽象语法树）
+  说白了vue-template-compiler该插件就是用来编译vue模板，如果没用该插件，那么webpack不认识vue的语法规则，
+  vue-loader的作用就是提取vue文件中的逻辑代码 script、样式代码 style、以及 HTML，
+  最后交给vue-template-compiler插件做编译处理
+  AST树（抽象语法树）如下
+  {
+  "type": "Program",
+  "start": 0,
+  "end": 19,
+  "body": [
+    {
+      "type": "FunctionDeclaration",
+      "start": 0,
+      "end": 19,
+      "id": {
+        "type": "Identifier",
+        "start": 9,
+        "end": 15,
+        "name": "getAST"
+      },
+      "expression": false,
+      "generator": false,
+      "params": [],
+      "body": {
+        "type": "BlockStatement",
+        "start": 17,
+        "end": 19,
+        "body": []
+      }
+    }
+  ],
+  "sourceType": "module"
+}
+*/ 
