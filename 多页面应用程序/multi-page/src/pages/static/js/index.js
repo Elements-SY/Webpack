@@ -1,4 +1,4 @@
-import "../../assets/font/iconfont/iconfont.css"
+import "../../assets/font/iconfont/iconfont.css";
 import "../css/common.scss";
 import "./common.js";
 import "../css/index.css";

@@ -17,10 +17,10 @@ module.exports = {
   // 假设通过CDN 引入 外部扩展(externals)，
   // 该配置选项提供了「从输出的 bundle 中排除依赖」的方法而不是把它打包
   externals: {
-    'jquery': 'jQuery',
-    'vue': 'Vue',
+    // 'jquery': 'jQuery',
+    // 'vue': 'Vue',
     // 'vue-router': 'VueRouter',
-    'element-ui': 'ElementUI',
+    // 'element-ui': 'ElementUI',
   },
   // 入口文件
   entry: routers.routerHtmlJs,
@@ -132,7 +132,7 @@ module.exports = {
       warnings: false, errors: true
     },
     host: 'localhost',
-    port: 8080,
+    port: 8081,
     open: true,
     openPage: 'index.html',
     publicPath: '/'

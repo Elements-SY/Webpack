@@ -4,7 +4,7 @@
       <h1>首页</h1>
       <span class="iconfont icon-zhangdan"></span>
     </header>
-    <button>我使用jQuery库注册了点击事件，点击我试试</button>
+    <button class="btn">我使用jQuery库注册了点击事件，点击我试试</button>
     <el-row>
       <el-button
         v-for="(item,index) in btnArr"
@@ -57,6 +57,9 @@ export default {
 <style lang="css" scoped>
 h1 {
   color: red;
+  font-size: 16px;
+}
+.btn {
   font-size: 16px;
 }
 </style>

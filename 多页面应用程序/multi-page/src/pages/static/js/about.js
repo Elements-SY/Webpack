@@ -9,3 +9,8 @@ new Vue({
   el: document.querySelector('.about'),
   render: (h) => h(About)
 })
+$(document).ready(function () {
+  $("button").click(function () {
+    alert("我被点击了。");
+  });
+});

@@ -12,7 +12,8 @@ module.exports = [ //配置加载器, 用来处理源文件, 可以把es6, jsx�
     },
   },
   {
-    exclude: /node_modules|packages/,
+    // exclude: /node_modules|packages/, 
+    // 如果css、less、sass等通过node_modules|packages一定不要加这行否则会排出node_modules|packages中的文件
     test: /\.(postc|le|sa|sc|c)ss$/,
     use: [
       // 如果使用了 mini-css-extract-plugin 插件，就可以不用style-loader了
