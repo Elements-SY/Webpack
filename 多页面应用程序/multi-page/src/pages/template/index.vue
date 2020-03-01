@@ -13,13 +13,18 @@
         :key="index"
       >{{item.id | serType}}</el-button>
     </el-row>
+    <tabs></tabs>
     <section>
       <img src="../assets/image/fashion.jpg" alt srcset />
     </section>
   </main>
 </template>
 <script>
+import tabs from '../components/Tabs.vue'
 export default {
+  components: {
+    tabs
+  },
   data () {
     return {
       btnArr: [
