@@ -1,7 +1,9 @@
 import Vue from 'vue';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import '../http'
 Vue.use(ElementUI);
+// 全局过滤器
 Vue.filter('serType', (val) => {
   console.log(val)
   switch (val) {
@@ -25,7 +27,3 @@ Vue.filter('serType', (val) => {
       break
   }
 })
-var obj = {
-  name: '孙宇'
-}
-console.log(obj)

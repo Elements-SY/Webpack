@@ -21,6 +21,7 @@
 </template>
 <script>
 import tabs from '../components/Tabs.vue'
+import { topics } from '../static/http'
 export default {
   components: {
     tabs
@@ -54,8 +55,31 @@ export default {
           type: 'danger',
           isabled: true
         }
-      ]
+      ],
+      params: {
+        page: 1,
+        tab: 'job',
+        limit: 1
+      }
     }
+  },
+  created () {
+    this.sum()
+  },
+  mounted () {
+
+  },
+  methods: {
+    sum () {
+      topics(this.params).then(res => {
+        console.log(res)
+      }).catch(error => {
+        console.log(error)
+      })
+    }
+  },
+  watch: {
+
   },
 }
 </script>
