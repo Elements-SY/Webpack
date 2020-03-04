@@ -9,21 +9,21 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const webpackRules = require('./webpack.config.rules');
 var routers = require('../config/router');
-function resolve (dir) {
-  return path.join(__dirname, '..', dir)
-}
+// function resolve (dir) {
+//   return path.join(__dirname, '..', dir)
+// }
 module.exports = {
-  resolve:{
+  resolve: {
     //引入路径是不用写对应的后缀名
     extensions: ['.js', '.vue', '.json'],
     //缩写扩展
-    alias:{
-        //正在使用的是vue的运行时版本，而此版本中的编译器时不可用的，我们需要把它切换成运行时 + 编译的版本
-        'vue$':'vue/dist/vue.esm.js',// 'vue/dist/vue.common.js' for webpack 1
-        //用@直接指引到src目录下，如：'./src/main'可以写成、'@/main'
-        '@': path.resolve(__dirname,'./src'),
+    alias: {
+      //正在使用的是vue的运行时版本，而此版本中的编译器时不可用的，我们需要把它切换成运行时 + 编译的版本
+      'vue$': 'vue/dist/vue.esm.js',// 'vue/dist/vue.common.js' for webpack 1
+      //用@直接指引到src目录下，如：'./src/main'可以写成、'@/main'
+      '@': path.resolve(__dirname, './src'),
     }
-},
+  },
   // 假设通过CDN 引入 外部扩展(externals)，
   // 该配置选项提供了「从输出的 bundle 中排除依赖」的方法而不是把它打包
   externals: {
