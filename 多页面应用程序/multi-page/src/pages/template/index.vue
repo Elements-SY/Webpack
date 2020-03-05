@@ -20,7 +20,7 @@
   </main>
 </template>
 <script>
-import tabs from '../components/Tabs.vue'
+import tabs from '../components/Tabs'
 import { topics } from '../static/http'
 export default {
   components: {
