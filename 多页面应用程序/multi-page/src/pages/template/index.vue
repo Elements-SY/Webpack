@@ -4,7 +4,7 @@
       <h1>首页</h1>
       <span class="iconfont icon-zhangdan"></span>
     </header>
-    <button class="btn">我使用jQuery库注册了点击事件，点击我试试</button>
+    <button class="btn">我通过CDN引入使用jQuery库注册了点击事件，点击我试试</button>
     <el-row>
       <el-button
         v-for="(item,index) in btnArr"
