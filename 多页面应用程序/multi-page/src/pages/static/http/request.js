@@ -3,22 +3,22 @@ import axios from 'axios'
 // import 'nprogress/nprogress.css'
 import { Loading, Message } from 'element-ui'
 // import { getToken } from "@/static/utils/auth";
-let APIHOST = 'https://cnodejs.org/api/v1'
+let APIHOST;
 axios.defaults.baseURL = APIHOST
 axios.defaults.timeout = 10000
 // console.log(process.env.NODE_ENV)
 switch (process.env.NODE_ENV) {
   // 开发环境
   case 'development':
-    APIHOST = '开发环境'
+    APIHOST = 'https://cnodejs.org/api/v1'
     break
   // 测试环境
   case 'testing':
-    APIHOST = '测试环境'
+    APIHOST = 'https://cnodejs.org/api/v1'
     break
   // 生产环境
   default:
-    APIHOST = '生产环境'
+    APIHOST = 'https://cnodejs.org/api/v1'
     break
 }
 console.log(APIHOST)

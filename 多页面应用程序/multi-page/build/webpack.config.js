@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserJSPlugin = require('terser-webpack-plugin');
+// 用terser-webpack-plugin替换掉uglifyjs-webpack-plugin解决uglifyjs不支持es6语法问题
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -70,8 +71,13 @@ module.exports = {
     ]),
     // 压缩css
     new OptimizeCssAssetsPlugin({
-      assetNameRegExp: /\.css$/g, //一个正则表达式，指示应优化\最小化的资产的名称。提供的正则表达式针对配置中ExtractTextPlugin实例导出的文件的文件名运行，而不是源CSS文件的文件名。默认为/\.css$/g
-      cssProcessor: require('cssnano'), //用于优化\最小化CSS的CSS处理器，默认为cssnano。这应该是一个跟随cssnano.process接口的函数（接收CSS和选项参数并返回一个Promise）。
+      // 一个正则表达式，指示应优化\最小化的资产的名称。
+      // 提供的正则表达式针对配置中ExtractTextPlugin实例导出的文件的文件名运行，
+      // 而不是源CSS文件的文件名。默认为/\.css$/g
+      assetNameRegExp: /\.css$/g,
+      cssProcessor: require('cssnano'),
+      // 用于优化\最小化CSS的CSS处理器，默认为cssnano。
+      // 这应该是一个跟随cssnano.process接口的函数（接收CSS和选项参数并返回一个Promise）。
       cssProcessorOptions: { safe: true, discardComments: { removeAll: true } }, //传递给cssProcessor的选项，默认为{}
       canPrint: true //一个布尔值，指示插件是否可以将消息打印到控制台，默认为true
     }),
@@ -120,6 +126,7 @@ module.exports = {
     },
     // 最小化器=> 目的是用来进一步优化，这里使用第三方插件来做优化
     minimizer: [
+      // 用terser-webpack-plugin替换掉uglifyjs-webpack-plugin解决uglifyjs不支持es6语法问题
       // 译为“简要的JS插件”。该插件用来压缩js
       new TerserJSPlugin({
         cache: true,
