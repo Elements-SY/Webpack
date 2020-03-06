@@ -1,4 +1,5 @@
 // JSON数组去重
+// uniqueArray(array, 'key')
 export function uniqueArray (array, key) {
   var result = [array[0]];
   for (var i = 1; i < array.length; i++) {

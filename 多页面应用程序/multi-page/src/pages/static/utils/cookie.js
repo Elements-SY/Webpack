@@ -22,7 +22,6 @@ export function getCookie (name) {
   })
   return json[name]
 }
-
 // 删除
 export function removeCookie () {
   setCookie(TokenKey, getCookie(TokenKey), -1, false)
