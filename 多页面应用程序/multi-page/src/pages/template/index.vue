@@ -15,6 +15,7 @@
     </el-row>
     <tabs></tabs>
     <section>
+      <a href="login.html">Enter Login Page</a>
       <img src="../assets/image/fashion.jpg" alt srcset />
     </section>
   </main>
