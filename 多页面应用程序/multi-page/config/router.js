@@ -1,6 +1,7 @@
 // 引入htmlPath => html相对根目录的路径; jsPath => html文件中的js相对根目录的路径;
 var publicPath = require('../build/utils');
 console.log(publicPath.jsPath('/jquery.js'))
+// webpack4 之html-webpack-plugin。 link: https://www.jianshu.com/p/08a60756ffda
 module.exports = {
   routerHtmlJs: {
     // jquery: cssPath.jsPath('/jquery.js'),
@@ -19,9 +20,9 @@ module.exports = {
     chunks: ['login', 'common'],
     minify: { // 压缩
       removeAttributeQuotes: false, // 去掉属性的双引号
-      removeComments: true, //移除HTML中的注释
-      collapseWhitespace: true, //折叠空白区域 也就是压缩代码
-      removeAttributeQuotes: false, //去除属性引用
+      removeComments: true, // 移除HTML中的注释
+      collapseWhitespace: true, // 折叠空白区域 也就是压缩代码
+      removeAttributeQuotes: false, // 去除属性引用
     },
   }, {
     title: '注册',

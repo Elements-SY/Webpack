@@ -15,13 +15,13 @@ var routers = require('../config/router');
 // }
 module.exports = {
   resolve: {
-    //引入路径是不用写对应的后缀名
+    // 引入路径是不用写对应的后缀名
     extensions: ['.js', '.vue', '.json'],
-    //缩写扩展
+    // 缩写扩展
     alias: {
-      //正在使用的是vue的运行时版本，而此版本中的编译器时不可用的，我们需要把它切换成运行时 + 编译的版本
-      'vue$': 'vue/dist/vue.esm.js',// 'vue/dist/vue.common.js' for webpack 1
-      //用@直接指引到src目录下，如：'./src/main'可以写成、'@/main'
+      // 正在使用的是vue的运行时版本，而此版本中的编译器时不可用的，我们需要把它切换成运行时 + 编译的版本
+      'vue$': 'vue/dist/vue.esm.js', // 'vue/dist/vue.common.js' for webpack 1
+      // 用@直接指引到src目录下，如：'./src/main'可以写成、'@/main'
       '@': path.resolve(__dirname, './src'),
     }
   },
@@ -88,8 +88,8 @@ module.exports = {
     //   jQuery: 'jquery',
     //   'window.jQuery': 'jquery'
     // }),
-    // 打包前清空
-    new CleanWebpackPlugin(),//实例化，参数为目录
+    // // 打包前清空
+    new CleanWebpackPlugin(), // 实例化，参数为目录
   ],
   // 优化
   optimization: {
@@ -101,10 +101,10 @@ module.exports = {
       cacheGroups: {
         // 打包公共模块
         common: {
-          chunks: 'initial', //initial表示提取入口文件的公共部分
-          minChunks: 2, //表示提取公共部分最少的文件数,也就是必须有两个文件都引入了同一个文件才会提取公共的js或者css
-          minSize: 0, //表示提取公共部分最小的大小
-          name: 'common', //提取出来的文件命名
+          chunks: 'initial', // initial表示提取入口文件的公共部分
+          minChunks: 2, // 表示提取公共部分最少的文件数,也就是必须有两个文件都引入了同一个文件才会提取公共的js或者css
+          minSize: 0, // 表示提取公共部分最小的大小
+          name: 'common', // 提取出来的文件命名
           minSize: 0,    // 只要超出0字节就生成一个新包
           // enforce: true,
           // reuseExistingChunk: true

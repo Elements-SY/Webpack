@@ -2,12 +2,13 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const babelConfig = require('../babel.config');
 const postcss = require('../postcss.config');
-module.exports = [ //配置加载器, 用来处理源文件, 可以把es6, jsx等转换成js, sass, less等转换成css
+// 配置加载器, 用来处理源文件, 可以把es6, jsx等转换成js, sass, less等转换成css
+module.exports = [
   {
-    exclude: /node_modules|packages/, //排除转码node_modules|packages文件中的模块
-    test: /\.js$/, //配置要处理的文件格式，一般使用正则表达式匹配
+    exclude: /node_modules|packages/, // 排除转码node_modules|packages文件中的模块
+    test: /\.js$/, // 配置要处理的文件格式，一般使用正则表达式匹配
     use: {
-      loader: 'babel-loader', //使用的加载器名称
+      loader: 'babel-loader', // 使用的加载器名称
       options: babelConfig
     },
   },
