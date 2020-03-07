@@ -2,28 +2,26 @@ import Vue from 'vue';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import '../http'
-import routers from '../router'
-import Router from 'vue-router'
+import router from '../router'
 // import { getToken } from "../utils/auth";
-Vue.use(Router)
-var router = new Router({
-  mode: 'history',
-  routes: routers
-})
 var getToken = false
-router.beforeEach((to, from, next) => { // 在进入
-  routers.forEach((val, i, item) => {
-    if (val.hasOwnProperty('meta') && val.meta.hasOwnProperty('request') && val.meta.request) {
-      to.meta['request'] = true
-    }
-  })
-  if (to.meta.request) {
+var metaRequest;
+router.beforeEach((to, from, next) => {
+  // console.log(to.path.slice(0, -5))
+  if (to.path.slice(0, -5) === '/register' || to.path.slice(0, -5) === '/login') {
+    metaRequest = false
+  } else {
+    metaRequest = true
+  }
+  // console.log(metaRequest)
+  if (metaRequest) {
     if (to.path == "/login.html") {
       next();
+      history.go(0)
     } else {
       if (!getToken) {
         next("/login.html");
-        history.go(0) // 刷新当前页面
+        history.go(0)
       } else {
         next();
       }
