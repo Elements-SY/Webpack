@@ -1,4 +1,4 @@
-// http API: https://cnodejs.org/api/v1
+// http API: http://v.juhe.cn | https://api.6vzz.com
 export default {
-  topics: '/topics', // 主题首页
+  weather: '/api/weather.php', // 获取天气预报接口
 }

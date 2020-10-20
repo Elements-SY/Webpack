@@ -4,7 +4,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import '../http'
 import router from '../router'
 // import { getToken } from "../utils/auth";
-var getToken = false
+var getToken = true
 var metaRequest;
 router.beforeEach((to, from, next) => {
   // console.log(to.path.slice(0, -5))

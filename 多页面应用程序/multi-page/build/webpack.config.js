@@ -140,7 +140,17 @@ module.exports = {
   },
   // webpack轻量级服务插件的配置
   devServer: {
-    contentBase: false,
+    proxy: {
+      '/api': {
+        target: 'https://api.6vzz.com/',
+        pathRewrite: {
+          '^/api': '/'
+        },
+        changeOrigin: true,     // target是域名的话，需要这个参数，
+        secure: true,          // 设置支持https协议的代理
+      }
+    },
+    contentBase: path.join(__dirname, "dist"),
     historyApiFallback: false,
     hot: true,
     quiet: true,

@@ -11,7 +11,7 @@
     "html-webpack-plugin": "^3.2.0",
     "html-withimg-loader": "^0.1.16",
     "image-webpack-loader": "^4.5.0",
-    "imagemin-pngquant": "^6.0.0", // 
+    "imagemin-pngquant": "^6.0.0", 
     "img-loader": "^3.0.1",
     "mini-css-extract-plugin": "^0.4.5",
     "node-sass": "^4.10.0",
@@ -24,11 +24,16 @@
     "webpack-dev-server": "^3.1.10"
 
 autoprefixer:
-autoprefixerSass，Stylus或LESS等预处理器共通使用。它适用于普通的CSS，而你无需关心要为哪些浏览器加前缀，
+autoprefixerSass，Stylus或LESS等预处理器共通使用。它适用于普通的CSS，
+
+而你无需关心要为哪些浏览器加前缀，
+
 只需全新关注于实现，并使用W3C最新的规范。配合postcss一起使用后更好。友情链接:https://www.jianshu.com/p/46a19ee297fc
 
 optimize-css-assets-webpack-plugin:
-optimize-css-assets-webpack-plugin用于优化或者压缩CSS资源,webpack3中一般配合 ExtractTextPlugin一起使用。
+optimize-css-assets-webpack-plugin用于优化或者压缩CSS资源,
+
+webpack3中一般配合 ExtractTextPlugin一起使用。
 
 mini-css-extract-plugin:
 mini-css-extract-plugin将CSS提取为独立的文件的插件，对每个包含css的js文件都会创建一个CSS文件，

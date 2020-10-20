@@ -11,7 +11,7 @@ new Vue({
   render: (h) => h(Index)
 })
 $(document).ready(function () {
-  $("button").click(function () {
+  $(".btn").click(function () {
     alert("我被点击了。");
   });
 });

@@ -1,17 +1,45 @@
 <template>
   <main>
+    <el-row :gutter="24">
+      <el-col :span="6">
+        <ul>
+          <li>
+            <span>{{ weatherInfoList.time }}</span>
+            <span>{{ weatherInfoList.day_weather }}</span>
+          </li>
+        </ul>
+      </el-col>
+    </el-row>
+    <el-row :gutter="24">
+      <el-col :span="6">
+        <el-input v-model="params.p" placeholder="请输入省份"></el-input>
+      </el-col>
+      <el-col :span="6">
+        <el-input v-model="params.c" placeholder="请输入城市"></el-input>
+      </el-col>
+      <el-col :span="6">
+        <el-input v-model="params.x" placeholder="请输入县名"></el-input>
+      </el-col>
+      <el-col :span="6">
+        <el-button @click="getWeatherInfo">查询天气</el-button>
+      </el-col>
+    </el-row>
+
     <header>
       <h1>首页</h1>
       <span class="iconfont icon-zhangdan"></span>
     </header>
-    <button class="btn">我通过CDN引入使用jQuery库注册了点击事件，点击我试试</button>
+    <button class="btn">
+      我通过CDN引入使用jQuery库注册了点击事件，点击我试试
+    </button>
     <el-row>
       <el-button
-        v-for="(item,index) in btnArr"
+        v-for="(item, index) in btnArr"
         :type="item.type"
         :disabled="item.isabled"
         :key="index"
-      >{{item.id | serType}}</el-button>
+        >{{ item.id | serType }}</el-button
+      >
     </el-row>
     <tabs></tabs>
     <section>
@@ -22,7 +50,7 @@
 </template>
 <script>
 import tabs from '../components/Tabs'
-import { topics } from '../static/http'
+import { weather } from '../static/http'
 export default {
   components: {
     tabs
@@ -57,23 +85,32 @@ export default {
           isabled: true
         }
       ],
+      weatherInfoList: {},
       params: {
-        page: 1,
-        tab: 'job',
-        limit: 1
+        p: '上海市',
+        c: '上海市',
+        x: ''
       }
     }
   },
   created () {
-    this.sum()
+    this.getWeatherInfo()
   },
   mounted () {
 
   },
   methods: {
-    sum () {
-      topics(this.params).then(res => {
-        console.log(res)
+    getWeatherInfo () {
+      weather(this.params).then(res => {
+        if (res.status == 200) {
+          if (res.data.status == 200) {
+            if (res.data.data) {
+              let weatherInfo = res.data.data
+              this.weatherInfoList = weatherInfo.forecast_24h['0']
+              console.log(weatherInfo.forecast_24h['0'])
+            }
+          }
+        }
       }).catch(error => {
         console.log(error)
       })
@@ -85,6 +122,8 @@ export default {
 }
 </script>
 <style lang="css" scoped>
+li {
+}
 h1 {
   color: red;
   font-size: 16px;
