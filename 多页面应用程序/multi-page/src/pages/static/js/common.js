@@ -40,7 +40,6 @@ new Vue({
 })
 // 全局过滤器
 Vue.filter('serType', (val) => {
-  console.log('全局过滤器', val)
   switch (val) {
     case '01':
       return '主要按钮'

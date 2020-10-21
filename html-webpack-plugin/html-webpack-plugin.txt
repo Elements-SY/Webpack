@@ -1,4 +1,8 @@
-﻿html-webpack-plugin该插件用于构建一个html文件，在引入该插件之后，new该插件所定义的对象函名，
+﻿html-webpack-plugin该插件用于重写一个HTML文件，
+
+其中html-webpack-plugin插件template属性是引入重写HTML文件对象的入口。
+
+在引入该插件之后，new该插件所定义的对象函名，
 
 并且该函数接收的是一个对象字面量，包含title，template等属性，
 

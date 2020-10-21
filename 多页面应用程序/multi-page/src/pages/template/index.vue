@@ -1,11 +1,11 @@
 <template>
   <main>
     <el-row :gutter="24">
-      <el-col :span="6">
+      <el-col>
         <ul>
           <li>
-            <span>{{ weatherInfoList.time }}</span>
-            <span>{{ weatherInfoList.day_weather }}</span>
+            <span>{{ weatherData.time }}</span>
+            <span>{{ weatherData.day_weather }}</span>
           </li>
         </ul>
       </el-col>
@@ -85,7 +85,7 @@ export default {
           isabled: true
         }
       ],
-      weatherInfoList: {},
+      weatherData: {},
       params: {
         p: '上海市',
         c: '上海市',
@@ -100,6 +100,13 @@ export default {
 
   },
   methods: {
+    getForNowDate () {
+      let date = new Date()
+      let y = date.getFullYear()
+      let m = date.getMonth() + 1
+      let d = date.getDate()
+      return y + '-' + m + '-' + d
+    },
     getWeatherInfo () {
       weather(this.params).then(res => {
         if (res.status == 200) {
@@ -107,8 +114,22 @@ export default {
             if (res.data.data) {
               let weatherInfo = res.data.data
               this.weatherInfoList = weatherInfo.forecast_24h['0']
-              console.log(weatherInfo.forecast_24h['0'])
+              let list = weatherInfo.forecast_24h
+              if (JSON.stringify(weatherInfo.forecast_24h) !== '{}' && weatherInfo.forecast_24h !== null) {
+                Object.keys(list).map(k => {
+                  if (list[k].time == this.getForNowDate()) {
+                    this.weatherData = list[k]
+                  }
+                })
+              } else {
+                this.weatherData = {
+                  time: this.getForNowDate(),
+                  day_weather: ''
+                }
+              }
             }
+          } else {
+            this.$message.error(res.data.msg);
           }
         }
       }).catch(error => {

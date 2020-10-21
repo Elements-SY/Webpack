@@ -1,6 +1,5 @@
 // 引入htmlPath => html相对根目录的路径; jsPath => html文件中的js相对根目录的路径;
 var publicPath = require('../build/utils');
-console.log(publicPath.jsPath('/jquery.js'))
 // webpack4 之html-webpack-plugin。 link: https://www.jianshu.com/p/08a60756ffda
 module.exports = {
   routerHtmlJs: {
