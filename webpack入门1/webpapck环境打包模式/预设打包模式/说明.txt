@@ -1,0 +1,11 @@
+﻿webpack 打包模式分为两种，一种是 production，一种是development；见图(pic-1.png、pic-2.png)
+
+如果在终端中预设打包模式: webpack --mode=production
+
+或者在package.json中的scripts命令中配置打包模式见图(pic-3.png)
+
+如果在终端中预设打包所选文件可以这么写: webpack --config sunyu.js
+
+如果不加--config，那么webpack 默认会打包webpack.config.js命名的文件。
+
+那么则不必在打包配置文件中设置 mode: 'production'
