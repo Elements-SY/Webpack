@@ -1,0 +1,1 @@
+﻿从pic.png该图片中我们不难看出，如果我们设置打包模式就会改变node.js进程的环境（process.env.NODE_ENV）。

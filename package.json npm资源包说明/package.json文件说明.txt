@@ -1,0 +1,13 @@
+﻿package.json文件是npm 资源包。通过该文件我们可以在当前package.json文件所在目录中打开终端直接npm install,
+在package.json文件中分别有dependencies和devDependencies两个字段，前者在生产环境使用，后者在开发环境使用。
+如果打包生产环境时，项目中某个地方使用到了npm install jquery；
+但是npm install jquery却下载安装到了devDependencies字段中。那么此时找不到所依赖的jquery就会报错。
+
+{
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode=development --config build/webpack.config.js",
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.config.js"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
