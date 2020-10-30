@@ -1,0 +1,26 @@
+﻿我们在npm资源管理包package.json中的script字段里常见一些:
+
+--progress --colors --devtool --mode --config等等一些前缀是--的命令；
+
+{
+  "name": "loaders",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.dev.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cross-env NODE_ENV=development webpack --mode=development --config webpack.config.dev.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "css-loader": "^5.0.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}
+
+
+关于前缀是--的命令的文档链接地址:https://webpack.html.cn/api/cli.html

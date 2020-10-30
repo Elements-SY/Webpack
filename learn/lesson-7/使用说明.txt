@@ -1,0 +1,13 @@
+﻿在当前文件目录下打开终端直接npm i即可;
+
+如果全局安装了webpack和webpack-cli则可以直接跳过npm install。
+
+上节课程学习了有关对打包的文件进行提取抽离css文件，
+
+但是我们想实现一个打包之后生成css文件、js文件、以及html文件等，
+
+并且把css文件以及js文件写到html中,此时我们就要使用html-webpack-plugin插件即可;
+
+
+
+

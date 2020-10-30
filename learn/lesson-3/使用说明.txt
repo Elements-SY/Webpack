@@ -1,0 +1,12 @@
+﻿在当前文件目录下打开终端直接npm i即可;
+
+如果全局安装了webpack和webpack-cli则可以直接跳过npm install。
+
+在课件1我们在终端输入命令webpack，在课件2我们在终端输入webpack --config webpack.config.dev.js，
+
+本节课程我们通过在npm资源管理工具包下在script字段中配置打包命令。
+
+对于终端窗口我们不再输入webpack --config webpack.config.dev.js这么长的命令，
+
+而是在终端输入npm run build即可
+

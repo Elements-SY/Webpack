@@ -1,0 +1,12 @@
+﻿在当前文件目录下打开终端直接npm i即可;
+
+如果全局安装了webpack和webpack-cli则可以直接跳过npm install。
+
+本节课程我们学习loader加载器的添加和配置,以css-loader为例。
+
+目的就是为了能够让webpack处理css，如果我们打包的文件引用了css文件，
+
+那么我们就必须下载安装和配置css-loader。
+
+详情参考官方文档：https://webpack.html.cn/concepts/loaders.html
+

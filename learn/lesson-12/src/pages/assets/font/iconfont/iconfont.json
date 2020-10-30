@@ -1,0 +1,93 @@
+{
+  "id": "406488",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "122691",
+      "name": "close",
+      "font_class": "close",
+      "unicode": "e69a",
+      "unicode_decimal": 59034
+    },
+    {
+      "icon_id": "322934",
+      "name": "setting",
+      "font_class": "20zhanghaoguanli",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "392075",
+      "name": "ARROW",
+      "font_class": "arrow",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "421184",
+      "name": "打印报表",
+      "font_class": "dayinbaobiao",
+      "unicode": "e693",
+      "unicode_decimal": 59027
+    },
+    {
+      "icon_id": "602165",
+      "name": "arrow down",
+      "font_class": "arrowdown-copy",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "1305406",
+      "name": "上",
+      "font_class": "shang",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "1365603",
+      "name": "报表中心",
+      "font_class": "baobiaozhongxin",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "1503641",
+      "name": "饼图",
+      "font_class": "bingtu",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "1727366",
+      "name": "27账单",
+      "font_class": "zhangdan",
+      "unicode": "e89e",
+      "unicode_decimal": 59550
+    },
+    {
+      "icon_id": "4054994",
+      "name": "退出",
+      "font_class": "tuichu",
+      "unicode": "e6de",
+      "unicode_decimal": 59102
+    },
+    {
+      "icon_id": "6652504",
+      "name": "error",
+      "font_class": "error",
+      "unicode": "e6c6",
+      "unicode_decimal": 59078
+    },
+    {
+      "icon_id": "6770729",
+      "name": "denglu",
+      "font_class": "denglu",
+      "unicode": "e6e6",
+      "unicode_decimal": 59110
+    }
+  ]
+}

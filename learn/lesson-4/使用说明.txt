@@ -1,0 +1,17 @@
+﻿在当前文件目录下打开终端直接npm i即可;
+
+如果全局安装了webpack和webpack-cli则可以直接跳过npm install。
+
+我们回顾一下，在学习前几节课程时，每次打包都会报如pic.png图片中的黄色警告提示语，
+
+关于这个详情参考当前目录下的“打包模式”文件夹下的内容
+
+或者参考官方链接地址：https://webpack.html.cn/concepts/mode.html;
+
+打包的顺序命令不能颠倒：
+
+正确顺序：webpack --mode=production --config webpack.config.dev.js
+
+错误写法：webpack --config --mode=production webpack.config.dev.js
+
+

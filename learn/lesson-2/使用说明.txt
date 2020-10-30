@@ -1,0 +1,13 @@
+﻿在当前文件目录下打开终端直接npm i即可;
+
+如果全局安装了webpack和webpack-cli则可以直接跳过npm install。
+
+打开终端输入：webpack --config webpack.config.dev.js回车即可;
+
+与课节1在终端输入打包命令不同的是，课节1直接输入webpack回车即可,
+
+但是在课节2中需要在当前终端输入webpack --config webpack.config.dev.js。
+
+如果课节2按照课节1在终端输入打包命令会报错。
+
+关于这个问题详见当前目录下的webpack命令行接口.txt文件中的链接地址

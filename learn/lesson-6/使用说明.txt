@@ -1,0 +1,10 @@
+﻿在当前文件目录下打开终端直接npm i即可;
+
+如果全局安装了webpack和webpack-cli则可以直接跳过npm install。
+
+上节课程学习了有关loader加载器的配置，但是还需要对打包的文件进行提取抽离css文件，
+
+添加配置loader，首先要配置正则规则然后再use使用该loader插件和mini-css-extract-plugin插件,
+
+如果不提取抽离css文件那么就会把css文件打包在出口的js文件里,见图pic.png
+

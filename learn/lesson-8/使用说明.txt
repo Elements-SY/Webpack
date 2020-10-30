@@ -1,0 +1,32 @@
+﻿在当前文件目录下打开终端直接npm i即可;
+
+如果全局安装了webpack和webpack-cli则可以直接跳过npm install。
+
+回顾前几节课程内容，我们掌握了打包命令和打包的对象和输出，
+
+以及代码分离和html-webpack-plugin插件模板引入打包对象依赖的css和js资源。
+
+但是有一个问题就是如果我们引入的不是css而是less或者sass,再或者我们引入的不是ES5而是ES6，
+
+像上述这些我们如果把less或者sass转成css,把ES6转换成ES5 ？
+
+既然是less或者sass，我们当然需要下载less和sass 加载器（loader）给予配置处理成我们想要的css。
+
+而对于ES6我们则需要通过babel，所以我们就需要下载babel-loader,
+
+本节课程我们就学习一下上述的内容。
+
+对于这些我们要注意哪些东西需要转，哪些不需要转。所以我们要排除哪些文件不需要转(node_modules包和packages.json),
+
+如果添加babel打包之后想要查看是否转换成立ES5，webpack 打包模式mode设置成development即可，
+
+否则使用production模式只能查看得到结果集，并看不到ES语法。
+
+所有插件这里建议该课程的npm 资源工具包内的插件版本。
+
+我们在打包之后发现less和sass的确被转换成css了，但是打包文件引入两个样式文件(main.scss和common.less),
+
+并且打包之后两个文件合并成一个文件了。针对这个问题我们放在lesson-9课件中讲解。
+
+
+

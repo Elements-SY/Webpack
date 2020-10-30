@@ -1,0 +1,14 @@
+﻿在当前文件目录下打开终端直接npm i即可;
+
+如果全局安装了webpack和webpack-cli则可以直接跳过npm install。
+
+上节内容我们学习了提取公共资源和分离,这节我们学习资源拷贝、清除文件。
+
+copy-webpack-plugin 和 clean-webpack-plugin这两个插件
+
+我们用copy-webpack-plugin插件来实现打包的时候同时把整个assets目录复制剪切到我们打包后的dist目录下；
+
+使用clean-webpack-plugin插件打包的时候清空dist目录下的目标对象
+
+
+

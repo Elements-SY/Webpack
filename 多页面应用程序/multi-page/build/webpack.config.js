@@ -1,5 +1,5 @@
 const path = require('path');
-// const webpack = require('webpack');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserJSPlugin = require('terser-webpack-plugin');
@@ -10,9 +10,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const webpackRules = require('./webpack.config.rules');
 var routers = require('../config/router');
-// function resolve (dir) {
-//   return path.join(__dirname, '..', dir)
-// }
+function resolve (dir = './src') {
+  return path.resolve(__dirname, './src')
+}
 module.exports = {
   resolve: {
     // 引入路径是不用写对应的后缀名
@@ -22,7 +22,7 @@ module.exports = {
       // 正在使用的是vue的运行时版本，而此版本中的编译器时不可用的，我们需要把它切换成运行时 + 编译的版本
       'vue$': 'vue/dist/vue.esm.js', // 'vue/dist/vue.common.js' for webpack 1
       // 用@直接指引到src目录下，如：'./src/main'可以写成、'@/main'
-      '@': path.resolve(__dirname, './src'),
+      '@': resolve(),
     }
   },
   // 假设通过CDN 引入 外部扩展(externals)，
@@ -81,6 +81,12 @@ module.exports = {
       cssProcessorOptions: { safe: true, discardComments: { removeAll: true } }, //传递给cssProcessor的选项，默认为{}
       canPrint: true //一个布尔值，指示插件是否可以将消息打印到控制台，默认为true
     }),
+
+    // 该方法解决被包文件异步引入文件时，打包生成序列文件
+    // new webpack.optimize.MinChunkSizePlugin({
+    //   minChunkSize: 102400
+    // }),
+
     // // provide译为提供的意思。 ProvidePlugin：提供插件
     // // 自动加载模块，而不必到处 import 或 require 。
     // new webpack.ProvidePlugin({

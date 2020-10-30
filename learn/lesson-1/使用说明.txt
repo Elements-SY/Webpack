@@ -1,0 +1,5 @@
+﻿在当前文件目录下打开终端直接npm i即可;
+
+如果全局安装了webpack和webpack-cli则可以直接跳过npm install。
+
+打开终端输入：webpack 回车即可
