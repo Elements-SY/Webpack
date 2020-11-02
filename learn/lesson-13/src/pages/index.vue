@@ -1,7 +1,7 @@
 <template>
   <div class="index">
+    <p>{{ msg }}</p>
     <img src="../assets/image/fashion.jpg" alt="" srcset="" />
-    {{ msg }}
   </div>
 </template>
 
