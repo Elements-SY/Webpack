@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode=development --config build/webpack.dev.conf.js",
-    "build:test": "cross-env NODE_ENV=production webpack --mode=production --config build/webpack.test.conf.js",
+    "build": "cross-env NODE_ENV=production webpack --mode=production --config build/webpack.test.conf.js",
     "build:prod": "cross-env NODE_ENV=production webpack --mode=production --config build/webpack.prod.conf.js"
   },
   "keywords": [],
@@ -29,6 +29,7 @@
     "cssnano": "^4.1.10",
     "element-ui": "^2.13.0",
     "file-loader": "^2.0.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^6.0.0",

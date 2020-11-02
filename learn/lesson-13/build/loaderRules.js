@@ -48,23 +48,20 @@ module.exports = [
       }
     ],
   },
-  {
-    test: /\.(htm|html)$/i,
-    use: [
-      {
-        loader: 'html-loader',
-        options: {
-          minimize: true, //是否压缩HTML文件
-          removeComments: false, //是否移除HTML中的注释
-          collapseWhitespace: false, //是否删除空白符与换行符
-          attrs: ['img:src', 'link:href']
-        }
-      },
-      // {
-      //   loader: 'html-withimg-loader'
-      // }
-    ],
-  },
+  // { // html-loader与HtmlWebpackPlugin会产生冲突
+  //   test: /\.(htm|html)$/i,
+  //   use: [
+  //     {
+  //       loader: 'html-loader',
+  //       options: {
+  //         minimize: true, //是否压缩HTML文件
+  //         removeComments: false, //是否移除HTML中的注释
+  //         collapseWhitespace: false, //是否删除空白符与换行符
+  //         attrs: ['img:src', 'link:href']
+  //       }
+  //     },
+  //   ],
+  // },
   {
     test: /\.vue$/,
     loader: 'vue-loader'

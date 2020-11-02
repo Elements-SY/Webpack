@@ -1,6 +1,7 @@
 'use strict'
 const path = require('path')
 const webpack = require('webpack')
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -8,6 +9,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const loaderRules = require('./loaderRules')
 const routers = require('../config/router')
+const { dev } = require('../config')
 const config = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -38,6 +40,16 @@ const config = {
         ignore: ['.*']
       }
     ]),
+    new FriendlyErrorsPlugin({
+      compilationSuccessInfo: {
+        messages: [`You application is running here http://localhost:${dev.devServer.port}${dev.devServer.publicPath}`],
+        notes: ['Some additionnal notes to be displayed unpon successful compilation']
+      },
+      onErrors: function (severity, errors) { },
+      clearConsole: true,
+      additionalFormatters: [],
+      additionalTransformers: []
+    }),
     new webpack.optimize.MinChunkSizePlugin({
       minChunkSize: 102400
     }),

@@ -1,5 +1,6 @@
 <template>
   <div class="index">
+    <img src="../assets/image/fashion.jpg" alt="" srcset="" />
     {{ msg }}
   </div>
 </template>
@@ -15,4 +16,7 @@ export default {
 </script>
 
 <style>
+img {
+  height: 200px;
+}
 </style>
