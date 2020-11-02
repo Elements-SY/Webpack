@@ -1,5 +1,4 @@
 'use strict'
-const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const babelConfig = require('../babel.config');
 const postcss = require('../postcss.config');
