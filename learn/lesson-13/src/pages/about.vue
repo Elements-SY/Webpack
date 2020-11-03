@@ -1,18 +1,23 @@
 <template>
-  <div class="about">
-    <h1>{{ msg }}</h1>
-  </div>
+<div class="about">
+  <h1>{{ msg }}</h1>
+</div>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      msg: 'about'
+      msg: 'About',
+      list: {}
     }
   }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+h1 {
+  font-size: 14px;
+  color: aqua;
+}
 </style>
