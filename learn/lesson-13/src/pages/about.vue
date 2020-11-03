@@ -14,5 +14,5 @@ export default {
 }
 </script>
 
-<style>
+<style lang="sass" scoped>
 </style>
