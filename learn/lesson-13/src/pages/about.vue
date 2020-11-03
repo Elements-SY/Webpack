@@ -8,11 +8,15 @@
 export default {
   data() {
     return {
-      msg: 'About'
+      msg: 'About',
+      list: {}
     }
   }
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
+h1 {
+  font-size: 14px;
+}
 </style>
