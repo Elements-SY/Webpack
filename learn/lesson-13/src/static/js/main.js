@@ -7,6 +7,7 @@ import "@/assets/font/iconfont/iconfont.css"
 import "@/static/css/common.scss"
 import "@/static/css/index.scss"
 import "@/static/utils/filters"
+import "@/static/utils/xss"
 Vue.use(ElementUI)
 new Vue({
   router,

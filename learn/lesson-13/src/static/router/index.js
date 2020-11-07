@@ -12,6 +12,7 @@ export default new VueRouter({
   routes: [
     {
       path: '/',
+      redirect: '/about',
       name: 'index',
       component: Index
     },
