@@ -1,12 +1,12 @@
 'use strict'
 const path = require('path')
-const { baseUrl } = require('./dev.env')
+const { BaseUrl } = require('./dev.env')
 module.exports = {
   dev: {
     devServer: {
       proxy: {
         '/api': {
-          target: baseUrl,
+          target: BaseUrl,
           pathRewrite: {
             '^/api': '/'
           },
