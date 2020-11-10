@@ -1,5 +1,5 @@
 'use strict'
 module.exports = {
   NODE_ENV: '"production"',
-  BaseUrl: 'https://baidu/api/v1'
+  BaseUrl: 'https://api.6vzz.com/'
 }

@@ -5,13 +5,13 @@ module.exports = {
   dev: {
     devServer: {
       proxy: {
-        '/api': {
+        '/dev-api': {
           target: BaseUrl,
           pathRewrite: {
-            '^/api': '/'
+            '^/dev-api': '/'
           },
-          changeOrigin: true,     // target是域名的话，需要这个参数，
-          secure: true,          // 设置支持https协议的代理
+          changeOrigin: true, // target是域名的话，需要这个参数，
+          secure: true, // 设置支持https协议的代理
         }
       },
       contentBase: path.join(__dirname, "dist"),
