@@ -100,6 +100,7 @@ const config = {
     new webpack.optimize.MinChunkSizePlugin({
       minChunkSize: 102400
     }),
+    new webpack.HotModuleReplacementPlugin(),
     // 打包前清空
     new CleanWebpackPlugin(), // 实例化，参数为目录
   ],

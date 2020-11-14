@@ -4,6 +4,7 @@
     <el-col>
       <ul>
         <li>
+          <strong>当前天气：</strong>
           <span>{{ weatherData.time }}</span>
           <span>{{ weatherData.day_weather }}</span>
         </li>

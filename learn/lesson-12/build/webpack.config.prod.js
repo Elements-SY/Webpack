@@ -93,6 +93,7 @@ module.exports = {
     //   jQuery: 'jquery',
     //   'window.jQuery': 'jquery'
     // }),
+    new webpack.HotModuleReplacementPlugin(),
     // // 打包前清空
     new CleanWebpackPlugin(), // 实例化，参数为目录
   ],
