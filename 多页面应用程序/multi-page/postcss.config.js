@@ -1,4 +1,6 @@
-// https://github.com/michael-ciniawsky/postcss-load-config
+// 参考链接： https://blog.csdn.net/qq_41635167/article/details/90319183
+
+// https://www.w3cplus.com/css3/autoprefixer-css-vender-prefixes.html
 const postcssPlugins = {
   plugins: [
     require('autoprefixer')({
@@ -12,6 +14,7 @@ const postcssPlugins = {
     }),
     require('postcss-aspect-ratio-mini')(),
     require('postcss-write-svg')({ utf8: false }),
+    // https://github.com/michael-ciniawsky/postcss-load-config
     require('postcss-px-to-viewport')({
       viewportWidth: 750,  //视窗的宽度
       viewportHeight: 1334,  //视窗的高度
