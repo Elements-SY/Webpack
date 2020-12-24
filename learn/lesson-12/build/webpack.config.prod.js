@@ -147,10 +147,10 @@ module.exports = {
   // webpack轻量级服务插件的配置
   devServer: {
     proxy: {
-      '/api': {
+      '/dev-api': {
         target: 'https://api.6vzz.com/',
         pathRewrite: {
-          '^/api': '/'
+          '^/dev-api': '/'
         },
         changeOrigin: true,     // target是域名的话，需要这个参数，
         secure: true,          // 设置支持https协议的代理

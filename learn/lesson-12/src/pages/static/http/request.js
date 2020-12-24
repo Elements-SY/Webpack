@@ -10,15 +10,15 @@ axios.defaults.timeout = 10000
 switch (process.env.NODE_ENV) {
   // 开发环境
   case 'development':
-    APIHOST = '/api'
+    APIHOST = '/dev-api'
     break
   // 测试环境
   case 'testing':
-    APIHOST = 'https://api.6vzz.com/'
+    APIHOST = '/test-api'
     break
   // 生产环境
   default:
-    APIHOST = 'https://api.6vzz.com/'
+    APIHOST = '/prod-api'
     break
 }
 console.log(APIHOST)

@@ -8,7 +8,8 @@ module.exports = {
         '/dev-api': {
           target: BaseUrl,
           pathRewrite: {
-            '^/dev-api': '/'
+            // 拦截 axios请求如果有"/dev-api" 就重写axios url并且代理以"/dev-api"做代理
+            '^/dev-api': '/' 
           },
           changeOrigin: true, // target是域名的话，需要这个参数，
           secure: true, // 设置支持https协议的代理
